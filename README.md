@@ -132,11 +132,12 @@ Edit [`src/pcap-debugger/main.py`](file:///home/itachi/coding/git/pcap-debugger/
 
 ```python
 import duckdb
+import sys
 from core.ingest import pcap_to_duckdb
 from core.agent import analyze_pcap_with_llm
 
 if __name__ == "__main__":
-    PCAP_FILE = "pcaps/duck2.pcap"
+    PCAP_FILE = sys.argv[1]
     
     # 1. Initialize an in-memory DuckDB instance
     con = duckdb.connect(database=":memory:")
@@ -166,7 +167,7 @@ Execute the agent from the project root:
 
 ```bash
 source .venv/bin/activate
-python src/pcap-debugger/main.py
+python src/pcap-debugger/main.py pcaps/duck2.pcap
 ```
 
 ---
