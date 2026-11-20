@@ -254,4 +254,4 @@ pcap-debugger/
 
 ## 📄 License
 
-This project is licensed under the MIT License - see the [LICENSE](file:///home/itachi/coding/git/pcap-debugger/LICENSE) file for details.
+This project is licensed under the MIT License.
